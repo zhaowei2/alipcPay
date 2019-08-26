@@ -1,0 +1,15 @@
+$(function(){
+    $('#payMoney').click(function(){
+        $.ajax({
+            url:'/pay',
+            method:'get',
+            success:function(data){
+                console.log(data)
+                console.log(data.url)
+               if(data.url){
+                   window.location.href=data.url
+               }
+            }
+        })
+    })
+})
